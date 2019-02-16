@@ -25,5 +25,5 @@ COPY ./AbstractGroupPlotPlugin.py /usr/local/lib/python2.7/dist-packages/stamp/p
 COPY ./ExtendedErrorBar.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups/plots
 
 # run the command
-ENTRYPOINT ["python". "stamp_cmd.py"]
+ENTRYPOINT ["python", "stamp_cmd.py"]
 CMD ["-h"] 
