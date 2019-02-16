@@ -22,3 +22,8 @@ optional arguments:
   -t TABLE, --table TABLE
                         Table filename template (default: {g1}-vs-{g2}.test.xls)
 ```
+
+# Docker build
+```
+$ docker build -t hotdogee/stamp-cmd:1.5.0 .
+```
