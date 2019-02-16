@@ -3,7 +3,12 @@ A Command Line Interface (CLI) for Statistical Analysis of Metagenomic Profiles 
 
 Information regarding STAMP can be found at: http://kiwi.cs.dal.ca/Software/STAMP
 
-# Usage
+# Docker Usage
+```
+$ docker run -t -v ${PWD}/example:/data --rm test1 -i otu.g.spf -g Grouping.txt -d out2
+```
+
+# Local Usage
 ```
 $ python stamp_cmd.py -h
 usage: stamp_cmd.py [-h] -i PROFILE -g METADATA [-d OUTPUT] [-p PLOT]

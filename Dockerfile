@@ -16,14 +16,15 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     && pip install --upgrade numpy scipy 'matplotlib>=2.2.3,<3.0.0' \
     && pip install stamp \
-    && mkdir -p /usr/src/app
+    && mkdir -p /usr/src/app \
+    && mkdir -p /data
 
-WORKDIR /usr/src/app
+WORKDIR /data
 
 COPY ./stamp_cmd.py /usr/src/app
 COPY ./AbstractGroupPlotPlugin.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups
 COPY ./ExtendedErrorBar.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups/plots
 
 # run the command
-ENTRYPOINT ["python", "stamp_cmd.py"]
+ENTRYPOINT ["python", "/usr/src/app/stamp_cmd.py"]
 CMD ["-h"] 
