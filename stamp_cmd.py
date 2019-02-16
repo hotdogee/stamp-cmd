@@ -8,7 +8,7 @@ from importlib import import_module
 from distutils.sysconfig import get_python_lib
 
 import matplotlib as mpl
-mpl.use('Agg')
+mpl.use('agg')
 
 from PyQt4 import QtGui, QtCore
 
