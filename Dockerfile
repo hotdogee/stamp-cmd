@@ -10,6 +10,8 @@ RUN apt-get update
 
 RUN apt-get install -y python-qt4 libblas-dev liblapack-dev gfortran freetype* python-pip python-dev python-numpy python-scipy python-matplotlib
 
+RUN pip install --upgrade numpy
+
 RUN pip install STAMP
 
 RUN mkdir -p /usr/src/app
