@@ -5,7 +5,7 @@ Information regarding STAMP can be found at: http://kiwi.cs.dal.ca/Software/STAM
 
 # Docker Usage
 ```
-$ docker run -t -v ${PWD}/example:/data --rm test1 -i otu.g.spf -g Grouping.txt -d out2
+$ docker run -t -v ${PWD}/example:/data --rm hotdogee/stamp-cmd -i otu.g.spf -g Grouping.txt -d out
 ```
 
 # Local Usage
@@ -30,5 +30,7 @@ optional arguments:
 
 # Docker build
 ```
-$ docker build -t hotdogee/stamp-cmd:1.5.0 .
+$ docker build -f ./mkl/Dockerfile -t hotdogee/stamp-cmd:1.5.0 .
+$ docker tag hotdogee/stamp-cmd:1.5.0 hotdogee/stamp-cmd:latest
+$ docker push hotdogee/stamp-cmd
 ```

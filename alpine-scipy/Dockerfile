@@ -18,9 +18,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /data
 
-COPY ../stamp_cmd.py /usr/src/app
-COPY ../AbstractGroupPlotPlugin.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups
-COPY ../ExtendedErrorBar.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups/plots
+COPY ./stamp_cmd.py /usr/src/app
+COPY ./AbstractGroupPlotPlugin.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups
+COPY ./ExtendedErrorBar.py /usr/local/lib/python2.7/dist-packages/stamp/plugins/groups/plots
 
 # run the command
 ENTRYPOINT ["python", "/usr/src/app/stamp_cmd.py"]
