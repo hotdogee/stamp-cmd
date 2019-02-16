@@ -1,5 +1,5 @@
 #! /usr/bin/env python2
-__version__ = "1.2.0"
+__version__ = "1.5.0"
 import os
 import sys
 import argparse
