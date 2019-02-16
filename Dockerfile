@@ -1,5 +1,7 @@
 FROM buildpack-deps:jessie
 
+LABEL maintainer="Han Lin <hotdogee@gmail.com>"
+
 # http://bugs.python.org/issue19846
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
