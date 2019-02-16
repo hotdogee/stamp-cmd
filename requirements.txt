@@ -1,0 +1,17 @@
+appdirs
+click
+cycler
+functools32
+future
+h5py
+matplotlib
+numpy
+packaging
+pyparsing
+pyqi
+python-dateutil
+pytz
+scipy
+six
+biom-format
+STAMP
