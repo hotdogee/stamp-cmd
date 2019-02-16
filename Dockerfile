@@ -8,18 +8,20 @@ ENV PYTHON_VERSION 2.7.9
 
 RUN apt-get update
 
-RUN apt-get install -y python-qt4 libblas-dev liblapack-dev gfortran freetype* python-pip python-dev python-numpy python-scipy python-matplotlib
+RUN apt-get install -y python-qt4 libblas-dev liblapack-dev gfortran freetype* python-pip python-dev
 
-RUN pip install --upgrade numpy
+RUN pip install --upgrade numpy scipy matplotlib
 
-RUN pip install STAMP
+RUN pip install stamp
 
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 
 COPY ./stamp_cmd.py /usr/src/app
+COPY ./AbstractGroupPlotPlugin.py /usr/local/python2.7/dist-packages/stamp/plugins/groups
+COPY ./ExtendedErrorBar.py /usr/local/python2.7/dist-packages/stamp/plugins/groups/plots
 
 # run the command
-ENTRYPOINT ["python"]
-CMD ["-m", "site"] 
+ENTRYPOINT ["python". "stamp_cmd.py"]
+CMD ["-h"] 
