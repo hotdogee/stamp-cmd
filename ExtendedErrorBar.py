@@ -26,7 +26,7 @@ from PyQt4 import QtGui, QtCore
 import sys
 import math
 import numpy as np
-from mpl_toolkits.axes_grid import make_axes_locatable, Size
+from mpl_toolkits.axes_grid1 import make_axes_locatable, Size
 
 from stamp.plugins.groups.AbstractGroupPlotPlugin import AbstractGroupPlotPlugin, TestWindow, ConfigureDialog
 from stamp.plugins.groups.plots.configGUI.extendedErrorBarUI import Ui_ExtendedErrorBarDialog
