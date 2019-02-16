@@ -10,7 +10,7 @@ RUN apt-get update
 
 RUN apt-get install -y python-qt4 libblas-dev liblapack-dev gfortran freetype* python-pip python-dev
 
-RUN pip install --upgrade numpy scipy matplotlib
+RUN pip install --upgrade numpy scipy 'matplotlib>=2.2.3,<3.0.0'
 
 RUN pip install stamp
 
