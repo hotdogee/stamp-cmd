@@ -11,7 +11,9 @@ Information regarding STAMP can be found at: http://kiwi.cs.dal.ca/Software/STAM
 
 # Docker Usage
 ```
-$ docker run -t -v ${PWD}/example:/data --rm hotdogee/stamp-cmd -i otu.g.spf -g Grouping.txt -d out
+$ docker run -t -v ${PWD}/example:/data --name stamp1 hotdogee/stamp-cmd -i otu.g.spf -g Grouping.txt -d /out
+$ docker cp stamp1:/out .
+$ docker container rm stamp1
 ```
 
 # Local Usage
